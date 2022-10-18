@@ -5,17 +5,19 @@ import { Contact } from "../../models/interfaces/contact";
 import axios from "axios";
 // import { create } from "domain";
 
+const BASE_URL = "https://mycontacts-api.onrender.com"
+
 export const getAllContacts = createAsyncThunk<any>(
   "CONTACTS/GET_ALL_CONTACTS",
-  () => axios.get("/api/contacts")
+  () => axios.get(`${BASE_URL}/api/contacts`)
 );
 export const saveNewContact = createAsyncThunk<any, Contact>(
   "CONTACTS/SAVE_NEW_CONTACT",
-  (data) => axios.post("/api/contacts", data)
+  (data) => axios.post(`${BASE_URL}/api/contacts`, data)
 );
-export const saveEditedContact = createAsyncThunk<any, any>('CONTACTS/SAVE_EDITED_CONTACT', (data) => axios.put('/api/contacts', data))
+export const saveEditedContact = createAsyncThunk<any, any>('CONTACTS/SAVE_EDITED_CONTACT', (data) => axios.put(`${BASE_URL}/api/contacts`, data))
 export const deleteContact = createAsyncThunk<any, any>('CONTACTS/DELETE_CONTACT', (data) => {
-  axios.put(`/api/contacts/${data.editingContact.id}`, data)
+  axios.put(`${BASE_URL}/api/contacts/${data.editingContact.id}`, data)
 })
 export const setNewContact = createAction<any>("CONTACTS/SET_NEW_CONTACT");
 export const setEditingContact = createAction<any>('CONTACTS/SET_EDITING_CONTACT');
