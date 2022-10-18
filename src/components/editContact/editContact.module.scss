@@ -1,0 +1,114 @@
+.editContactContainer {
+  height: auto; // header height and home body padding
+  width:calc(100% - 2rem);
+  background: #212529;
+  color: #fff;
+  font-weight: 600;
+  padding: .9rem 1rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // margin-bottom: 2rem;
+  overflow: auto;
+
+  // input {
+  //   width: 40%;
+  //   margin-right: 1rem;
+  //   font-size: 1rem;
+  //   border-radius: 5px;
+  //   padding: .5rem;
+  //   outline: none;
+  //   background: #343a40;
+  //   font-family: 'Quicksand', sans-serif;
+  //   color: #dee2e6;
+  //   font-weight: 600;
+  //   border: 2px solid #495057;
+  // }
+
+  .contactForm {
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    // margin-bottom: 12rem;
+    // overflow: auto;
+
+    input {
+      all: initial;
+      width: calc(100% - 4px - 1rem);
+      font-size: 1rem;
+      border-radius: 5px;
+      padding: .5rem;
+      outline: none;
+      background: #343a40;
+      font-family: 'Quicksand', sans-serif;
+      color: #dee2e6;
+      font-weight: 600;
+      margin: .2rem 0 .5rem 0;
+      border: 2px solid #495057;
+      
+    }
+    input::placeholder {
+      color: #dee2e6;
+      font-family: 'Quicksand', sans-serif;
+      // text-transform: uppercase;
+      font-weight: 600;
+    }
+    input:hover {
+      background: #495057;
+    }
+    
+    label {
+      margin-left: .2rem;
+    }
+    
+    
+    .saveButton {
+      margin-top: 1rem;
+      // margin-bottom: 1rem;
+      border-radius: 5px;
+      padding: .5rem 0;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      outline: none;
+      background: #343a40;
+      color: #fff;
+      border: 1px solid #495057;
+      text-align: center;
+      width: 100%;
+
+    }
+    .saveButton:hover {
+      cursor: pointer;
+      background: #495057;
+    }
+
+    .deleteButton {
+      margin-top: 1rem;
+      border-radius: 5px;
+      padding: .5rem .7rem;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      outline: none;
+      background: #343a40;
+      color: #ef233c;
+      border: 1px solid #495057;
+
+    }
+    .deleteButton:hover {
+      cursor: pointer;
+      background: #495057;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .editContactContainer {
+    .contactForm {
+      width: 80%;
+    }
+  }
+}

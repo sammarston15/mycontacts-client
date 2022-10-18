@@ -1,0 +1,64 @@
+/* Login page */
+
+/* color palette: https://coolors.co/0d1321-1d2d44-3e5c76-748cab-f0ebd8 */
+
+.loginPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0ebd8;
+}
+.loginModal {
+  width: 400px;
+  height: 300px;
+  background: #748cab;
+  box-shadow: 3px 3px 7px grey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loginModal input {
+  height: 2rem;
+  width: 80%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  /* border-color: #fff; */
+  background: rgba(62, 92, 118, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 5px 0;
+  padding: 5px;
+  /* margin-top: 5px; */
+  /* margin-bottom: 5px; */
+}
+.loginModal input::placeholder {
+  color: #fff;
+  font-weight: 400;
+}
+.loginModal button {
+  background: rgba(62, 92, 118, 0.2);
+  color: #fff;
+  height: 2rem;
+  padding: 0 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 2px 5px rgba(62, 92, 118, 0.5);
+  font-size: 1rem;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+.loginModal button:hover {
+  cursor: pointer;
+  background: #1d2d44;
+}
+
+.icon {
+  font-size: 5rem;
+  margin-bottom: 15px;
+}

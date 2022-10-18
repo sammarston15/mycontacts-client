@@ -1,0 +1,104 @@
+/* Home */
+.home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  
+
+
+  .contactList {
+    height: calc(100% - 50px - 2rem); // header height and home body padding
+    width: calc(100% - 2rem);
+    background: #212529;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    .listHeader {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      // background: lightblue;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #6c757d;
+      padding: 1rem 0 .5rem 0;
+      margin-bottom: .5rem;
+
+      .columnTitle {
+        display: flex;
+        margin-right: 1rem;
+        padding: .5rem;
+        border-radius: 3px;
+
+        span {
+          padding: 0 .5rem;
+        }
+      }
+      .columnTitle:hover {
+        background: #343a40;
+        cursor: pointer;
+      }
+      .columnIcon {
+        border: 1px solid #b7b7a4;
+        border-radius: 3px;
+        padding: .2rem;
+      }
+    
+    }
+    .contactCard {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #343a40;
+      border-radius: 5px;
+      // padding: 1rem .5rem;
+      margin: .1rem 0;
+
+      div {
+        padding: .5rem;
+      }
+    }
+    .contactCard:hover {
+      background: #495057;
+    }
+  }
+}
+
+// for when the screen size is less than 600px
+@media (max-width: 600px) {
+  .home {
+    .contactList{
+      .listHeader {
+        .columnTitle:nth-child(3) {
+          display: none;
+        }
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  .contactList {
+    .listHeader {
+      .columnTitle:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+  .home {
+    .contactList {
+      .contactCard {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  .contactCard div:nth-child(3) {
+    display: none;
+    // background: red;
+  }
+  .contactCard div:nth-child(4) {
+    display: none;
+    // background: blue;
+  }
+}
