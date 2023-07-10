@@ -6,16 +6,18 @@ import { Login } from "../login/Login";
 import SignUp from "../signup/SignUp";
 import NewContact from '../newContact/NewContact'
 import EditContact from "../editContact/EditContact";
+import ContactsList from "../home/ContactsList";
 
 export const App: FC = () => (
   <Router>
     <div className={styles.App}>
       <Routes>
-        <Route path="/" element={Home} />
-        <Route path="/login" element={Login} />
-        <Route path="/new" element={NewContact} />
-        <Route path='/contact/:contactIndex' element={EditContact} />
-        <Route path="/signup" element={SignUp} />
+        <Route path="/" element={<Home />} />
+        <Route path="/contacts" element={<ContactsList />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/new" element={<NewContact />} />
+        <Route path='/contacts/:contactIndex' element={<EditContact />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>
   </Router>
